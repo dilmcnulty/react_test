@@ -1,0 +1,8 @@
+{
+    "env":{
+        "MYSQL_HOST": "192.185.46.75",
+        "MYSQL_USER": "dmcnulty_dillonm",
+        "MYSQL_PASSWORD": "dillonm",
+        "MYSQL_DATABASE": "dmcnulty_Dealogy20"
+    }
+}
