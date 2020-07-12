@@ -9,14 +9,13 @@ module.exports = async(req,res) => {
     SELECT *
     FROM User
     ORDER BY userID
-    LIMIT ${(page - 1 ) * limit}, ${limit}
     `)
     const count = await db.query(escape `
         SELECT COUNT(*)
         AS profilesCount
         FROM profiles
     `)
-    const { profilesCount } = count[0]
+    const { profilesCount } = count
     const pageCount = Math.ceil(profilesCount / limit)
     res.status(200).json({profiles})
 }
